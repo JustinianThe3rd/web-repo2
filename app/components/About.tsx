@@ -1,0 +1,100 @@
+export default function About() {
+  return (
+    <section id="about" className="section-padding bg-surface">
+      <div className="container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Image Column */}
+          <div className="reveal relative">
+            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-brand-blue to-brand-blue-dark aspect-[4/3]">
+              {/* Placeholder graphic */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white/90 p-8">
+                <div className="w-24 h-24 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                  <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25z" />
+                  </svg>
+                </div>
+                <span className="font-display font-bold text-2xl">Doctor HVACR</span>
+                <span className="text-white/60 text-sm mt-1">Electrical & Plumbing</span>
+              </div>
+              {/* Decorative grid */}
+              <div className="absolute inset-0 opacity-10" style={{
+                backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+                backgroundSize: '30px 30px'
+              }} />
+            </div>
+
+            {/* Rating Badge Overlay */}
+            <div className="absolute -bottom-6 -right-4 lg:-right-6 bg-white rounded-xl shadow-lg p-4 flex items-center gap-3">
+              <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-accent text-white font-display font-bold text-xl">
+                5.0
+              </div>
+              <div>
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <span className="text-xs text-muted">44 Reviews</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Content Column */}
+          <div className="reveal reveal-delay-2">
+            <span className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold mb-4">
+              About Us
+            </span>
+            <h2 className="text-gray-900 mb-6">
+              Your Trusted Local Experts Since Day One
+            </h2>
+            <div className="space-y-4 text-gray-600">
+              <p>
+                Doctor HVACR Electrical & Plumbing is a women-owned and Asian-owned business proudly serving Cherry Hill Township and the greater New Jersey area. We specialize in providing top-quality HVAC, electrical, and plumbing services with a focus on honesty, professionalism, and customer satisfaction.
+              </p>
+              <p>
+                Our experienced team handles everything from emergency repairs to full system installations. We believe in transparent pricing — no upselling, no hidden fees, just quality work you can count on.
+              </p>
+              <p>
+                Available 24/7 for emergencies, we&apos;re the team your neighbors trust when it matters most.
+              </p>
+            </div>
+
+            {/* Trust badges */}
+            <div className="mt-8 flex flex-wrap gap-3">
+              {[
+                "Licensed & Insured",
+                "Women-Owned Business",
+                "Asian-Owned Business",
+                "LGBTQ+ Friendly",
+                "No Upselling",
+                "24/7 Emergency",
+              ].map((badge) => (
+                <span
+                  key={badge}
+                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-brand-red/5 border border-brand-red/10 text-brand-red text-xs font-medium"
+                >
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  {badge}
+                </span>
+              ))}
+            </div>
+
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl bg-brand-red text-white font-semibold hover:bg-brand-red-dark transition-colors"
+            >
+              Schedule Service
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
