@@ -1,25 +1,81 @@
+import Image from "next/image";
+
 const GALLERY_ITEMS = [
-  { title: "AC Installation", category: "HVAC" },
-  { title: "Electrical Panel Upgrade", category: "Electrical" },
-  { title: "Furnace Repair", category: "Heating" },
-  { title: "Water Heater Install", category: "Plumbing" },
-  { title: "Ductwork Service", category: "HVAC" },
-  { title: "Lighting Installation", category: "Electrical" },
+  {
+    title: "Commercial HVAC Installation",
+    category: "HVAC",
+    image: "/images/Commercial HVAC install.webp",
+    alt: "Commercial HVAC system installation at a business site in Cherry Hill, NJ",
+  },
+  {
+    title: "Commercial Equipment Setup",
+    category: "HVAC",
+    image: "/images/Equipment on comercial sites.webp",
+    alt: "Large commercial HVAC equipment installed at an industrial site",
+  },
+  {
+    title: "Heating System Installation",
+    category: "Heating",
+    image: "/images/Heating install.webp",
+    alt: "Professional heating system and furnace installation in a New Jersey home",
+  },
+  {
+    title: "Residential HVAC Installation",
+    category: "HVAC",
+    image: "/images/HVAC install.webp",
+    alt: "Complete residential HVAC system installation with indoor and outdoor units",
+  },
+  {
+    title: "Diagnostics & Troubleshooting",
+    category: "Service",
+    image: "/images/Identification of problems.webp",
+    alt: "HVAC technician inspecting and identifying system problems with diagnostic tools",
+  },
+  {
+    title: "Outdoor Unit Installation",
+    category: "HVAC",
+    image: "/images/Outdoor install 2.webp",
+    alt: "Outdoor condenser unit installation for a residential air conditioning system",
+  },
+  {
+    title: "Outdoor AC Unit Setup",
+    category: "HVAC",
+    image: "/images/Outdoor unit install.webp",
+    alt: "Freshly installed outdoor air conditioning unit at a home in Cherry Hill",
+  },
 ];
 
-function GalleryCard({ title, category }: { title: string; category: string }) {
+function GalleryCard({ title, category, image, alt }: {
+  title: string;
+  category: string;
+  image: string;
+  alt: string;
+}) {
   return (
-    <div className="flex-shrink-0 w-72 sm:w-80 lg:w-96 h-56 sm:h-64 rounded-xl overflow-hidden relative group cursor-pointer">
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-blue to-brand-navy" />
-      <div className="absolute inset-0 opacity-10" style={{
-        backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-        backgroundSize: '24px 24px'
-      }} />
-      <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/60 to-transparent">
-        <span className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: "#ff8a94" }}>{category}</span>
-        <h3 className="text-white font-display font-bold text-lg">{title}</h3>
+    <div className="flex-shrink-0 w-64 sm:w-72 lg:w-80 rounded-xl overflow-hidden relative group cursor-pointer">
+      {/* Image container — portrait aspect ratio matching source images (~3:4) */}
+      <div className="relative aspect-[3/4] w-full">
+        <Image
+          src={image}
+          alt={alt}
+          fill
+          sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
+          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+        />
       </div>
-      <div className="absolute inset-0 bg-brand-red/0 group-hover:bg-brand-red/20 transition-colors duration-300" />
+
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col justify-end p-5 sm:p-6">
+        <span className="text-xs font-semibold uppercase tracking-wider mb-1" style={{ color: "#ff8a94" }}>
+          {category}
+        </span>
+        <h3 className="text-white font-display font-bold text-base sm:text-lg leading-tight">
+          {title}
+        </h3>
+      </div>
+
+      {/* Hover overlay */}
+      <div className="absolute inset-0 bg-brand-red/0 group-hover:bg-brand-red/15 transition-colors duration-300 pointer-events-none" />
     </div>
   );
 }
@@ -46,8 +102,8 @@ export default function Gallery() {
       <div className="reveal reveal-delay-2">
         <div className="relative">
           {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 lg:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 lg:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
           {/* Repeating marquee rows */}
           <div className="flex flex-col gap-4">
@@ -55,16 +111,28 @@ export default function Gallery() {
             <div>
               <div
                 className="marquee-track"
-                style={{ "--marquee-duration": "40s" } as React.CSSProperties}
+                style={{ "--marquee-duration": "50s" } as React.CSSProperties}
               >
                 <div className="marquee-content gap-4 px-2">
                   {doubled.map((item, i) => (
-                    <GalleryCard key={`r1-${i}`} title={item.title} category={item.category} />
+                    <GalleryCard
+                      key={`r1-${i}`}
+                      title={item.title}
+                      category={item.category}
+                      image={item.image}
+                      alt={item.alt}
+                    />
                   ))}
                 </div>
                 <div className="marquee-content gap-4 px-2" aria-hidden="true">
                   {doubled.map((item, i) => (
-                    <GalleryCard key={`r1-dup-${i}`} title={item.title} category={item.category} />
+                    <GalleryCard
+                      key={`r1-dup-${i}`}
+                      title={item.title}
+                      category={item.category}
+                      image={item.image}
+                      alt={item.alt}
+                    />
                   ))}
                 </div>
               </div>
@@ -74,16 +142,28 @@ export default function Gallery() {
             <div>
               <div
                 className="marquee-track"
-                style={{ "--marquee-duration": "35s", animationDirection: "reverse" } as React.CSSProperties}
+                style={{ "--marquee-duration": "45s", animationDirection: "reverse" } as React.CSSProperties}
               >
                 <div className="marquee-content gap-4 px-2">
                   {[...doubled].reverse().map((item, i) => (
-                    <GalleryCard key={`r2-${i}`} title={item.title} category={item.category} />
+                    <GalleryCard
+                      key={`r2-${i}`}
+                      title={item.title}
+                      category={item.category}
+                      image={item.image}
+                      alt={item.alt}
+                    />
                   ))}
                 </div>
                 <div className="marquee-content gap-4 px-2" aria-hidden="true">
                   {[...doubled].reverse().map((item, i) => (
-                    <GalleryCard key={`r2-dup-${i}`} title={item.title} category={item.category} />
+                    <GalleryCard
+                      key={`r2-dup-${i}`}
+                      title={item.title}
+                      category={item.category}
+                      image={item.image}
+                      alt={item.alt}
+                    />
                   ))}
                 </div>
               </div>

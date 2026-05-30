@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <section id="about" className="section-padding bg-surface">
@@ -5,38 +7,31 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image Column */}
           <div className="reveal relative">
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-brand-blue to-brand-blue-dark aspect-[4/3]">
-              {/* Placeholder graphic */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-white/90 p-8">
-                <div className="w-24 h-24 rounded-full bg-white/10 flex items-center justify-center mb-6">
-                  <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25z" />
-                  </svg>
-                </div>
-                <span className="font-display font-bold text-2xl">Doctor HVACR</span>
-                <span className="text-white/60 text-sm mt-1">Electrical & Plumbing</span>
-              </div>
-              {/* Decorative grid */}
-              <div className="absolute inset-0 opacity-10" style={{
-                backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-                backgroundSize: '30px 30px'
-              }} />
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-brand-blue">
+              <Image
+                src="/images/Our team.webp"
+                alt="Doctor HVACR team of certified HVAC technicians and electricians"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center"
+              />
             </div>
 
             {/* Rating Badge Overlay */}
-            <div className="absolute -bottom-6 -right-4 lg:-right-6 bg-white rounded-xl shadow-lg p-4 flex items-center gap-3">
-              <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-accent text-white font-display font-bold text-xl">
+            <div className="absolute -bottom-4 -right-2 lg:-right-4 bg-white rounded-xl shadow-lg p-3 sm:p-4 flex items-center gap-3 z-10">
+              <div className="flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-accent text-white font-display font-bold text-lg sm:text-xl">
                 5.0
               </div>
               <div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-0.5">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <svg key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
                 </div>
-                <span className="text-xs text-muted">44 Reviews</span>
+                <span className="text-xs text-gray-500">44 Reviews</span>
               </div>
             </div>
           </div>
@@ -62,7 +57,7 @@ export default function About() {
             </div>
 
             {/* Trust badges */}
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-2 sm:gap-3">
               {[
                 "Licensed & Insured",
                 "Women-Owned Business",
