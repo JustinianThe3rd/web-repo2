@@ -79,7 +79,7 @@ export default function About() {
             </div>
 
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl bg-brand-red text-white font-semibold hover:bg-brand-red-dark transition-colors"
             >
               Schedule Service

@@ -40,7 +40,7 @@ export default function StickyMobileCTA() {
             Call Now
           </a>
           <a
-            href="#contact"
+            href="/#contact"
             className="flex-1 inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-brand-blue text-white font-semibold text-sm"
           >
             Get a Quote

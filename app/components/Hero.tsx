@@ -52,7 +52,7 @@ export default function Hero() {
             Call Now — (856) 900-2260
           </a>
           <a
-            href="#contact"
+            href="/#contact"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white text-brand-blue font-semibold text-lg hover:bg-white/95 transition-colors shadow-lg w-full sm:w-auto"
           >
             Get a Free Quote

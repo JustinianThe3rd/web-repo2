@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
+import RevealScript from "./components/RevealScript";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -92,47 +93,13 @@ export default function RootLayout({
       lang="en"
       className={`${outfit.variable} ${inter.variable} h-full`}
     >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                var revealed = false;
-                function reveal() {
-                  if (revealed) return;
-                  revealed = true;
-                  var els = document.querySelectorAll('.reveal, .hero-fade-up, .hero-line');
-                  for (var i = 0; i < els.length; i++) {
-                    els[i].classList.add('is-visible');
-                  }
-                }
-                if ('IntersectionObserver' in window) {
-                  var observer = new IntersectionObserver(function(entries) {
-                    for (var i = 0; i < entries.length; i++) {
-                      if (entries[i].isIntersecting) {
-                        entries[i].target.classList.add('is-visible');
-                      }
-                    }
-                  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-                  document.addEventListener('DOMContentLoaded', function() {
-                    var els = document.querySelectorAll('.reveal, .hero-fade-up, .hero-line');
-                    for (var i = 0; i < els.length; i++) {
-                      observer.observe(els[i]);
-                    }
-                  });
-                } else {
-                  document.addEventListener('DOMContentLoaded', reveal);
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
+      <head />
       <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <RevealScript />
         {children}
       </body>
     </html>

@@ -7,6 +7,7 @@ const SERVICES = [
     ),
     title: "AC Repair & Installation",
     description: "Fast, reliable air conditioning repair and new system installations. We service all major brands and offer energy-efficient upgrades.",
+    href: "/services/ac-repair",
   },
   {
     icon: (
@@ -17,6 +18,7 @@ const SERVICES = [
     ),
     title: "Heating Systems",
     description: "Furnace repair, boiler service, and full heating system installations. Keep your home warm and safe through every winter.",
+    href: "/services/heating",
   },
   {
     icon: (
@@ -26,6 +28,7 @@ const SERVICES = [
     ),
     title: "Electrical Services",
     description: "Licensed electricians for panel upgrades, wiring, outlets, lighting installations, and emergency electrical repairs.",
+    href: "/services/electrical",
   },
   {
     icon: (
@@ -35,6 +38,7 @@ const SERVICES = [
     ),
     title: "Plumbing Solutions",
     description: "From leak repairs to full pipe replacement. We handle drain cleaning, water heaters, fixtures, and emergency plumbing.",
+    href: "/services/plumbing",
   },
 ];
 
@@ -68,7 +72,7 @@ export default function Services() {
               <h3 className="text-gray-900 mb-3">{service.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
               <a
-                href="#contact"
+                href={service.href}
                 className="inline-flex items-center gap-1 mt-4 text-brand-red font-semibold text-sm hover:gap-2 transition-all"
               >
                 Learn More

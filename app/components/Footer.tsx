@@ -2,16 +2,16 @@ import Link from "next/link";
 
 const FOOTER_LINKS = {
   services: [
-    { label: "AC Repair & Installation", href: "#services" },
-    { label: "Heating Systems", href: "#services" },
-    { label: "Electrical Services", href: "#services" },
-    { label: "Plumbing Solutions", href: "#services" },
+    { label: "AC Repair & Installation", href: "/#services" },
+    { label: "Heating Systems", href: "/#services" },
+    { label: "Electrical Services", href: "/#services" },
+    { label: "Plumbing Solutions", href: "/#services" },
   ],
   company: [
-    { label: "About Us", href: "#about" },
-    { label: "Our Work", href: "#gallery" },
-    { label: "Reviews", href: "#reviews" },
-    { label: "Contact", href: "#contact" },
+    { label: "About Us", href: "/#about" },
+    { label: "Our Work", href: "/#gallery" },
+    { label: "Reviews", href: "/#reviews" },
+    { label: "Contact", href: "/#contact" },
   ],
 };
 
