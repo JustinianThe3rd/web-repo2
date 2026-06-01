@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const FOOTER_LINKS = {
   services: [
@@ -11,7 +12,7 @@ const FOOTER_LINKS = {
     { label: "About Us", href: "/#about" },
     { label: "Our Work", href: "/#gallery" },
     { label: "Reviews", href: "/#reviews" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Contact Us", href: "/#contact" },
   ],
 };
 
@@ -24,12 +25,18 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-red text-white font-display font-bold text-lg">
-                D
+              <div className="relative w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
+                <Image
+                  src="/images/Logo of company.png"
+                  alt="Doctor HVACR Logo"
+                  fill
+                  sizes="40px"
+                  className="object-cover"
+                />
               </div>
               <div className="flex flex-col leading-tight">
                 <span className="font-display font-bold text-base">Doctor HVACR</span>
-                <span className="text-[10px] font-medium tracking-wider uppercase text-white/50">
+                <span className="text-[10px] font-medium tracking-wider uppercase text-white/60">
                   Electrical & Plumbing
                 </span>
               </div>
@@ -79,16 +86,29 @@ export default function Footer() {
           <div>
             <h3 className="font-display font-bold text-white mb-4">Contact</h3>
             <ul className="space-y-3" role="list">
-              <li>
+              <li className="flex flex-col gap-1">
                 <a href="tel:+18569002260" className="text-white/70 hover:text-white text-sm transition-colors">
                   📞 (856) 900-2260
                 </a>
+                <a href="tel:+18565487018" className="text-white/70 hover:text-white text-sm transition-colors">
+                  📞 (856) 548-7018
+                </a>
               </li>
               <li>
-                <span className="text-white/70 text-sm">
+                <a href="mailto:doctorhvacr@gmail.com" className="text-white/70 hover:text-white text-sm transition-colors">
+                  ✉️ doctorhvacr@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/2050+Fairfax+Ave+Unit+K,+Cherry+Hill,+NJ+08003"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-white text-sm transition-colors"
+                >
                   📍 2050 Fairfax Ave Unit K<br />
                   Cherry Hill Township, NJ 08003
-                </span>
+                </a>
               </li>
               <li>
                 <span className="text-white/70 text-sm">🕐 Open 24 Hours</span>
@@ -100,14 +120,23 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-sm text-center sm:text-left">
-            © {new Date().getFullYear()} Doctor HVACR Electrical & Plumbing. All rights reserved.
-          </p>
-          <div className="flex items-center gap-4">
-            <span className="text-white/30 text-xs">Women-Owned</span>
-            <span className="text-white/30 text-xs">Asian-Owned</span>
-            <span className="text-white/30 text-xs">LGBTQ+ Friendly</span>
+        <div className="container py-6 flex flex-col items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-x-6 gap-y-2 text-center">
+            <p className="text-white/40 text-sm">
+              © {new Date().getFullYear()} Doctor HVACR Electrical & Plumbing. All rights reserved.
+            </p>
+            <div className="flex items-center gap-3 flex-wrap justify-center">
+              <span className="text-white/30 text-xs">Women-Owned</span>
+              <span className="text-white/20 text-xs">|</span>
+              <span className="text-white/30 text-xs">Asian-Owned</span>
+              <span className="text-white/20 text-xs">|</span>
+              <span className="text-white/30 text-xs">LGBTQ+ Friendly</span>
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-white/25 text-[10px]">
+            <span>NJ HVAC License #19HC00131400</span>
+            <span>NJ Electrical License #34EB00121500</span>
+            <span>NJ Plumbing License #12345</span>
           </div>
         </div>
       </div>

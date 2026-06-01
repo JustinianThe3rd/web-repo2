@@ -31,9 +31,15 @@ export default function Contact() {
                 <h3 className="font-display font-bold text-gray-900 mb-1">Phone</h3>
                 <a
                   href="tel:+18569002260"
-                  className="text-brand-red hover:text-brand-red-dark font-semibold text-lg transition-colors"
+                  className="text-brand-red hover:text-brand-red-dark font-semibold text-lg transition-colors block"
                 >
                   (856) 900-2260
+                </a>
+                <a
+                  href="tel:+18565487018"
+                  className="text-brand-blue hover:text-brand-blue-dark font-semibold text-lg transition-colors block"
+                >
+                  (856) 548-7018
                 </a>
                 <p className="text-sm text-gray-500 mt-1">Call anytime — 24/7 emergency line</p>
               </div>
@@ -57,6 +63,24 @@ export default function Contact() {
                 >
                   <p>2050 Fairfax Ave Unit K</p>
                   <p>Cherry Hill Township, NJ 08003</p>
+                </a>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center">
+                <svg className="w-6 h-6 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-display font-bold text-gray-900 mb-1">Email</h3>
+                <a
+                  href="mailto:doctorhvacr@gmail.com"
+                  className="text-brand-blue hover:text-brand-blue-dark font-semibold text-lg transition-colors"
+                >
+                  doctorhvacr@gmail.com
                 </a>
               </div>
             </div>

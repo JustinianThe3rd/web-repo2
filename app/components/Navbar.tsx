@@ -2,13 +2,14 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const NAV_LINKS = [
   { href: "/#services", label: "Services" },
   { href: "/#about", label: "About" },
   { href: "/#gallery", label: "Gallery" },
   { href: "/#reviews", label: "Reviews" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/#contact", label: "Contact Us" },
 ];
 
 export default function Navbar() {
@@ -33,7 +34,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white/95 backdrop-blur-md shadow-md"
-          : "bg-transparent"
+          : "bg-gradient-to-b from-black/40 to-transparent"
       }`}
       role="banner"
     >
@@ -41,11 +42,18 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2 group"
+          className="flex items-center gap-2.5 group"
           aria-label="Doctor HVACR Home"
         >
-          <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-brand-red text-white font-display font-bold text-lg">
-            D
+          <div className="relative w-10 h-10 lg:w-11 lg:h-11 rounded-lg overflow-hidden flex-shrink-0">
+            <Image
+              src="/images/Logo of company.png"
+              alt="Doctor HVACR Logo"
+              fill
+              sizes="(max-width: 768px) 40px, 44px"
+              className="object-cover"
+              priority
+            />
           </div>
           <div className="flex flex-col leading-tight">
             <span className={`font-display font-bold text-base lg:text-lg transition-colors ${
@@ -67,7 +75,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-brand-red ${
+                className={`text-sm font-medium transition-colors hover:text-primary-light ${
                   scrolled ? "text-gray-700" : "text-white/90"
                 }`}
               >
@@ -79,17 +87,30 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-4">
-          <a
-            href="tel:+18569002260"
-            className={`text-sm font-semibold transition-colors ${
-              scrolled
-                ? "text-brand-red hover:text-brand-red-dark"
-                : "text-white hover:text-white/80"
-            }`}
-            aria-label="Call (856) 900-2260"
-          >
-            (856) 900-2260
-          </a>
+          <div className="flex flex-col items-end">
+            <a
+              href="tel:+18569002260"
+              className={`text-sm font-semibold transition-colors leading-tight ${
+                scrolled
+                  ? "text-brand-red hover:text-brand-red-dark"
+                  : "text-white hover:text-white/80"
+              }`}
+              aria-label="Call (856) 900-2260"
+            >
+              (856) 900-2260
+            </a>
+            <a
+              href="tel:+18565487018"
+              className={`text-xs font-medium transition-colors leading-tight ${
+                scrolled
+                  ? "text-brand-blue hover:text-brand-blue-dark"
+                  : "text-white/70 hover:text-white/90"
+              }`}
+              aria-label="Call (856) 548-7018"
+            >
+              (856) 548-7018
+            </a>
+          </div>
           <a
             href="/#contact"
             className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-brand-red text-white text-sm font-semibold hover:bg-brand-red-dark transition-colors shadow-sm shadow-brand-red/20"
@@ -143,7 +164,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <div className="mt-8 flex flex-col gap-4">
+          <div className="mt-8 flex flex-col gap-3">
             <a
               href="tel:+18569002260"
               className="flex items-center justify-center py-3 px-4 rounded-lg border-2 border-brand-red text-brand-red font-semibold"
@@ -151,7 +172,13 @@ export default function Navbar() {
               📞 (856) 900-2260
             </a>
             <a
-              href="#contact"
+              href="tel:+18565487018"
+              className="flex items-center justify-center py-3 px-4 rounded-lg border-2 border-brand-blue text-brand-blue font-semibold"
+            >
+              📞 (856) 548-7018
+            </a>
+            <a
+              href="/#contact"
               onClick={closeMenu}
               className="flex items-center justify-center py-3 px-4 rounded-lg bg-brand-red text-white font-semibold"
             >
