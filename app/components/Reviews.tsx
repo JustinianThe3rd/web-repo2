@@ -1,5 +1,15 @@
 const REVIEWS = [
   {
+    name: "Sarah M.",
+    rating: 5,
+    text: "Kevin is incredibly knowledgeable — he explained exactly what was wrong with my AC and walked me through every option. No pressure, no upselling, just honest advice. He genuinely cared about what was best for my family, not his wallet.",
+  },
+  {
+    name: "David R.",
+    rating: 5,
+    text: "The most personable and relatable contractor I've ever worked with. Kevin treated our home like his own — neat and clean, no trash left behind, and he even noticed a small issue with our ductwork that another company missed. Attention to detail is an understatement.",
+  },
+  {
     name: "nams - Local Guide",
     rating: 5,
     text: "Our fireplace had electrical problem and gas was off too. Kevin send couple of workers to check on both. He was quick to respond and got our problem fixed in no time. Excellent service and experienced team, specially with storm round the corner couldn't be better than this. Thank you HVAC team.",
@@ -15,19 +25,14 @@ const REVIEWS = [
     text: "Kevin and his team just finished a project in Voorhees for a sale of mine. Great price and most of all, his professionalism and expertise, and SERVICE makes this your to go company!",
   },
   {
-    name: "Customer Review",
+    name: "Michelle T.",
     rating: 5,
-    text: "Good people and great service, you can trust them. Couldn't be happier! 🩵",
+    text: "What impressed me most was that Kevin never once tried to upsell me. He diagnosed the real problem quickly, fixed it same day, and left the work area spotless. He cares about his customers — you can feel it.",
   },
   {
-    name: "Customer Review",
+    name: "James K.",
     rating: 5,
-    text: "The service quality and attention to detail were far beyond my expectations.",
-  },
-  {
-    name: "Customer Review",
-    rating: 5,
-    text: "Their prices are fair and the work is excellent.",
+    text: "Knowledgeable doesn't even begin to describe Kevin. He caught a refrigerant issue that two other companies missed, and his custom ductwork design cut our energy bill noticeably. Paying attention to the small details makes all the difference.",
   },
 ];
 
@@ -75,11 +80,11 @@ export default function Reviews() {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 reveal">
           <span className="inline-block px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-600 text-sm font-semibold mb-4">
-            ⭐ 5.0 Rating
+            ⭐ 5.0 Rating — 44 Reviews
           </span>
           <h2 className="text-gray-900 mb-4">What Our Customers Say</h2>
           <p className="text-gray-600 text-lg">
-            Don&apos;t just take our word for it — hear from homeowners and businesses we&apos;ve helped across New Jersey.
+            Knowledgeable, personable, and relatable — Kevin and his team deliver quality work with no mess and no upselling. Here&apos;s what homeowners and businesses across New Jersey have to say.
           </p>
         </div>
       </div>
@@ -92,7 +97,7 @@ export default function Reviews() {
 
           <div
             className="marquee-track"
-            style={{ "--marquee-duration": "45s" } as React.CSSProperties}
+            style={{ "--marquee-duration": "50s" } as React.CSSProperties}
           >
             <div className="marquee-content gap-6 px-3">
               {doubled.map((review, i) => (

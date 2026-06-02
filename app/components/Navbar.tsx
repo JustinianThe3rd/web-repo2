@@ -47,7 +47,7 @@ export default function Navbar() {
         >
           <div className="relative w-10 h-10 lg:w-11 lg:h-11 rounded-lg overflow-hidden flex-shrink-0">
             <Image
-              src="/images/Logo of company.png"
+              src="/icon.png"
               alt="Doctor HVACR Logo"
               fill
               sizes="(max-width: 768px) 40px, 44px"

@@ -17,6 +17,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Doctor HVACR | Electrical, HVAC & Plumbing Services in Cherry Hill, NJ",
+  icons: {
+    icon: "/icon.png",
+  },
   description:
     "Doctor HVACR Electrical & Plumbing — Cherry Hill's trusted HVAC contractor. 5-star rated, 24/7 emergency service. HVAC repair, electrical, and plumbing for homes and businesses.",
   keywords: [

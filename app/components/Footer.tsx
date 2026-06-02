@@ -27,7 +27,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-4">
               <div className="relative w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
                 <Image
-                  src="/images/Logo of company.png"
+                  src="/icon.png"
                   alt="Doctor HVACR Logo"
                   fill
                   sizes="40px"

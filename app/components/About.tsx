@@ -10,7 +10,7 @@ export default function About() {
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-brand-blue">
               <Image
                 src="/images/Our team.webp"
-                alt="Doctor HVACR team of certified HVAC technicians and electricians"
+                alt="Doctor HVACR team of certified HVACR technicians and electricians"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -18,20 +18,14 @@ export default function About() {
               />
             </div>
 
-            {/* Rating Badge Overlay */}
+            {/* Credential Badge Overlay */}
             <div className="absolute -bottom-4 -right-2 lg:-right-4 bg-white rounded-xl shadow-lg p-3 sm:p-4 flex items-center gap-3 z-10">
-              <div className="flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-accent text-white font-display font-bold text-lg sm:text-xl">
-                5.0
+              <div className="flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-accent text-white font-display font-bold text-base sm:text-lg">
+                PhD
               </div>
               <div>
-                <div className="flex items-center gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <span className="text-xs text-gray-500">44 Reviews</span>
+                <p className="font-display font-bold text-sm text-gray-900">Kevin</p>
+                <span className="text-xs text-gray-500">Founder & Lead Engineer</span>
               </div>
             </div>
           </div>
@@ -39,32 +33,32 @@ export default function About() {
           {/* Content Column */}
           <div className="reveal reveal-delay-2">
             <span className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-semibold mb-4">
-              About Us
+              Meet Kevin
             </span>
             <h2 className="text-gray-900 mb-6">
-              Your Trusted Local Experts Since Day One
+              15 Years of Designing & Building — From Blueprint to Finished System
             </h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Doctor HVACR Electrical & Plumbing is a women-owned and Asian-owned business proudly serving Cherry Hill Township and the greater New Jersey area. We specialize in providing top-quality HVAC, electrical, and plumbing services with a focus on honesty, professionalism, and customer satisfaction.
+                Kevin founded Doctor HVACR with a simple philosophy: do the job right, treat customers like family, and never stop learning. With a <strong>PhD</strong> and over <strong>15 years of hands-on design and build experience</strong> spanning mechanical, electrical, and plumbing systems — as well as architectural and builder-grade construction — Kevin brings an engineer&apos;s precision and a tradesperson&apos;s practicality to every project.
               </p>
               <p>
-                Our experienced team handles everything from emergency repairs to full system installations. We believe in transparent pricing — no upselling, no hidden fees, just quality work you can count on.
+                His expertise covers the full spectrum: <strong>custom ductwork fabrication, Manual J load calculations</strong> for precise system sizing, <strong>AC and furnace efficiency design</strong>, refrigerant management, and complete HVACR system builds. From routine maintenance tune-ups to brand-new installations, most services are completed within a single day — because he knows your time matters.
               </p>
               <p>
-                Available 24/7 for emergencies, we&apos;re the team your neighbors trust when it matters most.
+                Whether it&apos;s a residential retrofit requiring architectural integration or a commercial build demanding MEP coordination, Kevin&apos;s cross-disciplinary background ensures every system is designed correctly from the start — no guesswork, no callbacks, just performance.
               </p>
             </div>
 
-            {/* Trust badges */}
+            {/* Expertise badges */}
             <div className="mt-8 flex flex-wrap gap-2 sm:gap-3">
               {[
-                "Licensed & Insured",
-                "Women-Owned Business",
-                "Asian-Owned Business",
-                "LGBTQ+ Friendly",
-                "No Upselling",
-                "24/7 Emergency",
+                "PhD — Mechanical Engineering",
+                "15+ Years Design & Build",
+                "HVACR & Refrigerant Specialist",
+                "MEP Systems Integration",
+                "Architectural Coordination",
+                "Same-Day Service",
               ].map((badge) => (
                 <span
                   key={badge}
@@ -82,7 +76,7 @@ export default function About() {
               href="/#contact"
               className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-xl bg-brand-red text-white font-semibold hover:bg-brand-red-dark transition-colors"
             >
-              Schedule Service
+              Talk to Kevin
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

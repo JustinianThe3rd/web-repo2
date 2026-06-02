@@ -5,8 +5,8 @@ const SERVICES = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25z" />
       </svg>
     ),
-    title: "AC Repair & Installation",
-    description: "Fast, reliable air conditioning repair and new system installations. We service all major brands and offer energy-efficient upgrades.",
+    title: "HVACR & Refrigerant Services",
+    description: "Full-spectrum HVACR: refrigerant recovery, recharge, and retrofits. Custom ductwork fabrication built on-site, Manual J load calculations for precise system sizing, and AC/furnace efficiency design. From maintenance tune-ups to full new installations — most completed within a single day. 10-year equipment warranty, 2-year labor warranty on all new installs, with extended 5–10 year coverage available.",
     href: "/services/ac-repair",
   },
   {
@@ -17,7 +17,7 @@ const SERVICES = [
       </svg>
     ),
     title: "Heating Systems",
-    description: "Furnace repair, boiler service, and full heating system installations. Keep your home warm and safe through every winter.",
+    description: "Furnace and boiler design, repair, and full system installations. Efficiency-optimized heating solutions for residential and commercial properties. Same-day service available for most repairs and replacements.",
     href: "/services/heating",
   },
   {
@@ -27,7 +27,7 @@ const SERVICES = [
       </svg>
     ),
     title: "Electrical Services",
-    description: "Licensed electricians for panel upgrades, wiring, outlets, lighting installations, and emergency electrical repairs.",
+    description: "Custom electrical design and end-to-end execution. Service panel upgrades from 100 to 200 amps, full electrical load calculations, and solar integration. Complete rewire and rough electrical for both residential and commercial buildings. Commercial clients include Kohl&apos;s, Honeygrow, and Tropical Smoothie Cafe.",
     href: "/services/electrical",
   },
   {
@@ -37,7 +37,7 @@ const SERVICES = [
       </svg>
     ),
     title: "Plumbing Solutions",
-    description: "From leak repairs to full pipe replacement. We handle drain cleaning, water heaters, fixtures, and emergency plumbing.",
+    description: "Complete plumbing design: gas risers, water risers, and drain risers from the ground up. Water heater and boiler replacements. Built complete plumbing systems for over 50 restaurants in the past 2 years, including kitchen hood and fire suppression integration with gas fittings.",
     href: "/services/plumbing",
   },
 ];
@@ -52,10 +52,10 @@ export default function Services() {
             Our Services
           </span>
           <h2 className="text-gray-900 mb-4">
-            Complete Home Comfort Solutions
+            Mechanical, Electrical & Plumbing — Designed and Built Right
           </h2>
           <p className="text-gray-600 text-lg">
-            From HVAC to electrical and plumbing, we provide comprehensive services to keep your home running smoothly.
+            HVACR, electrical, and plumbing services backed by 15 years of design and build experience. Every system engineered for performance, efficiency, and longevity.
           </p>
         </div>
 

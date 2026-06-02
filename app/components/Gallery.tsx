@@ -2,46 +2,46 @@ import Image from "next/image";
 
 const GALLERY_ITEMS = [
   {
-    title: "Commercial HVAC Installation",
-    category: "HVAC",
+    title: "Commercial HVACR Installation",
+    category: "HVACR",
     image: "/images/Commercial HVAC install.webp",
-    alt: "Commercial HVAC system installation at a business site in Cherry Hill, NJ",
+    alt: "Commercial HVACR system installation at a business site in Cherry Hill, NJ",
   },
   {
     title: "Commercial Equipment Setup",
-    category: "HVAC",
+    category: "HVACR",
     image: "/images/Equipment on comercial sites.webp",
-    alt: "Large commercial HVAC equipment installed at an industrial site",
+    alt: "Large commercial HVACR equipment installed at an industrial site",
   },
   {
     title: "Heating System Installation",
     category: "Heating",
     image: "/images/Heating install.webp",
-    alt: "Professional heating system and furnace installation in a New Jersey home",
+    alt: "Professional heating system and furnace efficiency installation in a New Jersey home",
   },
   {
-    title: "Residential HVAC Installation",
-    category: "HVAC",
+    title: "HVACR System — Complete Install",
+    category: "HVACR",
     image: "/images/HVAC install.webp",
-    alt: "Complete residential HVAC system installation with indoor and outdoor units",
+    alt: "Complete HVACR system installation with indoor and outdoor units, custom ductwork",
   },
   {
-    title: "Diagnostics & Troubleshooting",
+    title: "Diagnostics & Refrigerant Service",
     category: "Service",
     image: "/images/Identification of problems.webp",
-    alt: "HVAC technician inspecting and identifying system problems with diagnostic tools",
+    alt: "HVACR technician performing diagnostics, refrigerant checks, and system troubleshooting",
   },
   {
     title: "Outdoor Unit Installation",
-    category: "HVAC",
+    category: "HVACR",
     image: "/images/Outdoor install 2.webp",
-    alt: "Outdoor condenser unit installation for a residential air conditioning system",
+    alt: "Outdoor condenser unit installation for a residential air conditioning and refrigerant system",
   },
   {
     title: "Outdoor AC Unit Setup",
-    category: "HVAC",
+    category: "HVACR",
     image: "/images/Outdoor unit install.webp",
-    alt: "Freshly installed outdoor air conditioning unit at a home in Cherry Hill",
+    alt: "Freshly installed outdoor HVACR unit at a home in Cherry Hill, refrigerant-charged and tested",
   },
 ];
 
@@ -91,9 +91,9 @@ export default function Gallery() {
           <span className="inline-block px-3 py-1 rounded-full bg-brand-blue/10 text-brand-blue text-sm font-semibold mb-4">
             Our Work
           </span>
-          <h2 className="text-gray-900 mb-4">Projects We&apos;re Proud Of</h2>
+          <h2 className="text-gray-900 mb-4">HVACR & MEP Projects — Same-Day Turnaround</h2>
           <p className="text-gray-600 text-lg">
-            Browse a selection of recent HVAC, electrical, and plumbing projects we&apos;ve completed for homeowners across Cherry Hill.
+            Browse recent HVACR, refrigerant, electrical, and plumbing projects across Cherry Hill and South Jersey. From custom ductwork to full commercial system design — completed rapidly, built to last.
           </p>
         </div>
       </div>

@@ -18,7 +18,7 @@ export default function Hero() {
 
       {/* Large decorative text */}
       <div className="absolute -right-8 top-1/2 -translate-y-1/2 font-display font-bold text-[20rem] leading-none text-white/[0.04] select-none pointer-events-none hidden xl:block">
-        HVAC
+        HVACR
       </div>
 
       {/* Main content — vertically centered */}
@@ -26,19 +26,34 @@ export default function Hero() {
         {/* Badge */}
         <div className="hero-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-8">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          Open 24/7 — Emergency Service Available
+          Open 24/7 — Emergency HVACR Service Available
         </div>
 
         {/* Heading */}
         <h1 className="hero-fade-up reveal-delay-1 text-white max-w-4xl mx-auto mb-6">
-          Cherry Hill&apos;s Most Trusted
-          <span className="block text-white drop-shadow-[0_0_30px_rgba(255,60,80,0.4)]" style={{ color: "#ff6b7a" }}>HVAC & Electrical Experts</span>
+          Cherry Hill&apos;s Premier
+          <span className="block text-white drop-shadow-[0_0_30px_rgba(255,60,80,0.4)]" style={{ color: "#ff6b7a" }}>
+            HVACR & Refrigerant Specialists
+          </span>
         </h1>
 
         {/* Subheading */}
-        <p className="hero-fade-up reveal-delay-2 text-lg lg:text-xl text-white/90 max-w-2xl mx-auto mb-10">
-          From emergency repairs to full system installations, Doctor HVACR keeps your home comfortable year-round. Licensed, insured, and 5-star rated.
+        <p className="hero-fade-up reveal-delay-2 text-lg lg:text-xl text-white/90 max-w-2xl mx-auto mb-6">
+          From refrigerant recovery and custom ductwork to Manual J load calculations and furnace efficiency design — Doctor HVACR delivers expert mechanical, electrical, and plumbing services. Most jobs completed within a single day.
         </p>
+
+        {/* Warranty Strip */}
+        <div className="hero-fade-up reveal-delay-2 flex flex-wrap items-center justify-center gap-3 mb-10">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-xs sm:text-sm font-semibold">
+            ✓ 10-Year Equipment Warranty
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-xs sm:text-sm font-semibold">
+            ✓ 2-Year Labor Warranty on New Installs
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-xs sm:text-sm font-semibold">
+            ✓ Extended 5–10 Year Warranty Available
+          </span>
+        </div>
 
         {/* CTAs */}
         <div className="hero-fade-up reveal-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -63,12 +78,12 @@ export default function Hero() {
         </div>
 
         {/* Stats Row */}
-        <div className="hero-fade-up reveal-delay-4 mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 max-w-3xl w-full mx-auto">
+        <div className="hero-fade-up reveal-delay-4 mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 max-w-3xl w-full mx-auto">
           {[
-            { value: "5.0", label: "Star Rating" },
-            { value: "44+", label: "Reviews" },
+            { value: "15+", label: "Years Experience" },
+            { value: "5★", label: "44 Reviews" },
             { value: "24/7", label: "Emergency Service" },
-            { value: "100%", label: "Satisfaction" },
+            { value: "1-Day", label: "Most Jobs Done" },
           ].map((stat) => (
             <div key={stat.label} className="text-center rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-5">
               <div className="font-display font-bold text-2xl lg:text-3xl text-white">{stat.value}</div>
@@ -78,7 +93,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom divider — clean diagonal, no wave overlap */}
+      {/* Bottom divider */}
       <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
         <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-12 lg:h-16 block">
           <polygon points="0,60 1440,60 1440,20" fill="white" />
