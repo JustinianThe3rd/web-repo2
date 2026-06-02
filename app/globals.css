@@ -312,6 +312,17 @@ a {
   outline-offset: 2px;
 }
 
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* ============================================
    SCROLLBAR STYLING
    ============================================ */

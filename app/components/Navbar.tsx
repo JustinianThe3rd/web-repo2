@@ -30,6 +30,7 @@ export default function Navbar() {
   const closeMenu = useCallback(() => setMenuOpen(false), []);
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
@@ -139,54 +140,72 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
+    </header>
+
+    {/* Mobile Menu — rendered OUTSIDE the header so z-index works */}
+    {menuOpen && (
       <div
-        id="mobile-menu"
-        className={`lg:hidden fixed inset-0 top-16 bg-white transition-all duration-300 ${
-          menuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
+        className="lg:hidden fixed inset-0 z-[60] flex flex-col justify-end"
         role="dialog"
         aria-modal="true"
       >
-        <div className="container py-8">
-          <ul className="flex flex-col gap-2" role="list">
-            {NAV_LINKS.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  onClick={closeMenu}
-                  className="block py-3 px-4 text-lg font-medium text-gray-800 hover:text-brand-red hover:bg-gray-50 rounded-lg transition-colors"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-8 flex flex-col gap-3">
-            <a
-              href="tel:+18569002260"
-              className="flex items-center justify-center py-3 px-4 rounded-lg border-2 border-brand-red text-brand-red font-semibold"
-            >
-              📞 (856) 900-2260
-            </a>
-            <a
-              href="tel:+18565487018"
-              className="flex items-center justify-center py-3 px-4 rounded-lg border-2 border-brand-blue text-brand-blue font-semibold"
-            >
-              📞 (856) 548-7018
-            </a>
-            <a
-              href="/#contact"
-              onClick={closeMenu}
-              className="flex items-center justify-center py-3 px-4 rounded-lg bg-brand-red text-white font-semibold"
-            >
-              Get a Free Quote
-            </a>
+        {/* Backdrop — click to close */}
+        <div
+          className="absolute inset-0 bg-black/40"
+          onClick={closeMenu}
+          aria-hidden="true"
+        />
+
+        {/* Panel — slides up from bottom with solid bg */}
+        <div
+          id="mobile-menu"
+          className="relative z-10 bg-white rounded-t-2xl shadow-[0_-4px_30px_rgba(0,0,0,0.15)] w-full max-h-[85vh] flex flex-col animate-[slideUp_0.3s_ease-out]"
+        >
+          {/* Drag indicator */}
+          <div className="flex justify-center pt-3 pb-1 flex-shrink-0">
+            <div className="w-10 h-1 rounded-full bg-gray-300" />
+          </div>
+
+          {/* Scrollable content */}
+          <div className="container py-4 overflow-y-auto">
+            <ul className="flex flex-col gap-1" role="list">
+              {NAV_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    onClick={closeMenu}
+                    className="block py-3 px-4 text-lg font-medium text-gray-800 hover:text-brand-red hover:bg-gray-50 rounded-lg transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 flex flex-col gap-3 pb-4">
+              <a
+                href="tel:+18569002260"
+                className="flex items-center justify-center py-3 px-4 rounded-lg border-2 border-brand-red text-brand-red font-semibold"
+              >
+                📞 (856) 900-2260
+              </a>
+              <a
+                href="tel:+18565487018"
+                className="flex items-center justify-center py-3 px-4 rounded-lg border-2 border-brand-blue text-brand-blue font-semibold"
+              >
+                📞 (856) 548-7018
+              </a>
+              <a
+                href="/#contact"
+                onClick={closeMenu}
+                className="flex items-center justify-center py-3 px-4 rounded-lg bg-brand-red text-white font-semibold"
+              >
+                Get a Free Quote
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </header>
+    )}
+    </>
   );
 }
