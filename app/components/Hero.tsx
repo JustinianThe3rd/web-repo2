@@ -48,6 +48,9 @@ export default function Hero() {
             ✓ 10-Year Equipment Warranty
           </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-xs sm:text-sm font-semibold">
+            ✓ Covers NJ, DE, and PA
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-xs sm:text-sm font-semibold">
             ✓ 2-Year Labor Warranty on New Installs
           </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-xs sm:text-sm font-semibold">
