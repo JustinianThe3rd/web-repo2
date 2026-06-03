@@ -109,7 +109,7 @@ export default function Contact() {
               <p className="text-white/90 text-sm mb-4">Don&apos;t wait — our team is available 24/7 to handle your HVAC, electrical, and plumbing emergencies.</p>
               <a
                 href="tel:+18569002260"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-brand-red font-bold hover:bg-white/90 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-blue text-brand-red font-bold hover:bg-white/90 transition-colors"
               >
                 📞 Call Now
               </a>

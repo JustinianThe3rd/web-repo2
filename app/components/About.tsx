@@ -40,10 +40,10 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Kevin founded Doctor HVACR with a simple philosophy: do the job right, treat customers like family, and never stop learning. With a <strong>PhD</strong> and over <strong>15 years of hands-on design and build experience</strong> spanning mechanical, electrical, and plumbing systems — as well as architectural and builder-grade construction — Kevin brings an engineer&apos;s precision and a tradesperson&apos;s practicality to every project.
+                Kevin founded Doctor HVACR with a simple philosophy: do the job right, treat customers like family, and never stop learning. With a <strong>PhD</strong> and over <strong>15 years of hands-on design and build experience </strong> spanning mechanical, electrical, and plumbing systems — as well as architectural and builder-grade construction — Kevin brings an engineer&apos;s precision and a tradesperson&apos;s practicality to every project.
               </p>
               <p>
-                His expertise covers the full spectrum: <strong>custom ductwork fabrication, Manual J load calculations</strong> for precise system sizing, <strong>AC and furnace efficiency design</strong>, refrigerant management, and complete HVACR system builds. From routine maintenance tune-ups to brand-new installations, most services are completed within a single day — because he knows your time matters.
+                His expertise covers the full spectrum: <strong>custom ductwork fabrication, manual J load calculations</strong> for precise system sizing, <strong>AC and furnace efficiency design</strong>, refrigerant management, and complete HVACR system builds. From routine maintenance tune-ups to brand-new installations, most services are completed within a single day — because he knows your time matters.
               </p>
               <p>
                 Whether it&apos;s a residential retrofit requiring architectural integration or a commercial build demanding MEP coordination, Kevin&apos;s cross-disciplinary background ensures every system is designed correctly from the start — no guesswork, no callbacks, just performance.

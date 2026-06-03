@@ -6,7 +6,7 @@ const SERVICES = [
       </svg>
     ),
     title: "HVACR & Refrigerant Services",
-    description: "Full-spectrum HVACR: refrigerant recovery, recharge, and retrofits. Custom ductwork fabrication built on-site, Manual J load calculations for precise system sizing, and AC/furnace efficiency design. From maintenance tune-ups to full new installations — most completed within a single day. 10-year equipment warranty, 2-year labor warranty on all new installs, with extended 5–10 year coverage available.",
+    description: "Full-spectrum HVACR: refrigerant recovery, recharge, and retrofits. Custom ductwork fabrication built on-site, Manual J load calculations for precise system sizing, and AC/furnace efficiency design. From maintenance tune-ups to full new installations — most are completed within a single day. 10-year equipment warranty, 2-year labor warranty on all new installs, with extended 5–10 year coverage available.",
     href: "/services/ac-repair",
   },
   {
@@ -27,7 +27,7 @@ const SERVICES = [
       </svg>
     ),
     title: "Electrical Services",
-    description: "Custom electrical design and end-to-end execution. Service panel upgrades from 100 to 200 amps, full electrical load calculations, and solar integration. Complete rewire and rough electrical for both residential and commercial buildings. Commercial clients include Kohl&apos;s, Honeygrow, and Tropical Smoothie Cafe.",
+    description: "Custom electrical design and end-to-end execution. Service panel upgrades from 100 to 200 amps, full electrical load calculations, and solar integration. Complete rewire and rough electrical for both residential and commercial buildings. Commercial clients include Kohl's, Honeygrow, and Tropical Smoothie Cafe.",
     href: "/services/electrical",
   },
   {

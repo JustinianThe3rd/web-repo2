@@ -53,7 +53,7 @@ const jsonLd = {
   "@type": "HVACBusiness",
   name: "Doctor HVACR Electrical & Plumbing",
   description:
-    "HVAC contractor. We specialize in electrical, heating, cooling, and plumbing services for residential and commercial properties.",
+    "HVACR contractor. We specialize in electrical, heating, cooling, and plumbing services for residential and commercial properties.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "2050 Fairfax Ave Unit K",
