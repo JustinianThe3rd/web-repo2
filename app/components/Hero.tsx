@@ -33,7 +33,7 @@ export default function Hero() {
         <h1 className="hero-fade-up reveal-delay-1 text-white max-w-4xl mx-auto mb-6">
           Cherry Hill&apos;s Premier
           <span className="block text-white drop-shadow-[0_0_30px_rgba(255,60,80,0.4)]" style={{ color: "#ff6b7a" }}>
-            HVACR & Refrigerant Specialists
+            HVACR & Air Conditioning Specialists
           </span>
         </h1>
 
