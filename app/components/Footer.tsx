@@ -95,8 +95,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:doctorhvacr@gmail.com" className="text-white/70 hover:text-white text-sm transition-colors">
-                  ✉️ doctorhvacr@gmail.com
+                <a href="mailto:DoctorHVACR@KNJReality.com" className="text-white/70 hover:text-white text-sm transition-colors">
+                  ✉️ DoctorHVACR@KNJReality.com
                 </a>
               </li>
               <li>
