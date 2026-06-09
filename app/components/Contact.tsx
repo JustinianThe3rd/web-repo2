@@ -77,10 +77,10 @@ export default function Contact() {
               <div>
                 <h3 className="font-display font-bold text-gray-900 mb-1">Email</h3>
                 <a
-                  href="mailto:DoctorHVACR@KNJReality.com"
+                  href="mailto:DoctorHVACR@KNJRealty.com"
                   className="text-brand-blue hover:text-brand-blue-dark font-semibold text-lg transition-colors"
                 >
-                  DoctorHVACR@KNJReality.com
+                  DoctorHVACR@KNJRealty.com
                 </a>
               </div>
             </div>
