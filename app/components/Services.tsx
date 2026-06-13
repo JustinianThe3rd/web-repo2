@@ -6,7 +6,7 @@ const SERVICES = [
       </svg>
     ),
     title: "HVACR & Refrigerant Services",
-    description: "Full-spectrum HVACR: refrigerant recovery, recharge, and retrofits. Custom ductwork fabrication built on-site, Manual J load calculations for precise system sizing, and AC/furnace efficiency design. From maintenance tune-ups to full new installations — most are completed within a single day. 10-year equipment warranty, 2-year labor warranty on all new installs, with extended 5–10 year coverage available.",
+    description: "Full-spectrum HVACR: refrigerant recovery, recharge, and retrofits. Custom ductwork fabrication built on-site, Manual J load calculations for precise system sizing, and AC/furnace efficiency design. From maintenance tune-ups to full new installations — most are completed within a single day. 10-year equipment warranty. 2-year labor warranty on new installs* (owner-occupied properties; requires completion of our free maintenance training — filter changes every 3 months, annual coil cleaning). Extended 5–10 year coverage also available.",
     href: "/services/ac-repair",
   },
   {

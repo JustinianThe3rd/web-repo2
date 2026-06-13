@@ -51,12 +51,15 @@ export default function Hero() {
             ✓ Covers NJ, DE, and PA
           </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-xs sm:text-sm font-semibold">
-            ✓ 2-Year Labor Warranty on New Installs
+            ✓ 2-Year Labor Warranty on New Installs*
           </span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-xs sm:text-sm font-semibold">
             ✓ Extended 5–10 Year Warranty Available
           </span>
         </div>
+        <p className="hero-fade-up reveal-delay-2 text-white/50 text-xs sm:text-sm max-w-xl mx-auto text-center mt-3">
+          *2-year labor warranty applies to owner-occupied properties. Requires completion of our free maintenance training program, including filter changes every 3 months and annual coil cleaning. Training is provided at no cost.
+        </p>
 
         {/* CTAs */}
         <div className="hero-fade-up reveal-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
